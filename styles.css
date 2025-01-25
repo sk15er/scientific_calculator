@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background 0.3s;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.light-mode {
+    background-image: url('https://img.freepik.com/free-vector/blurred-bokeh-pattern-wallpaper-soft-touch-your-walls_1017-43483.jpg?semt=ais_hybrid'); /* Light mode background image */
+}
+
+.dark-mode {
+    background-image: url('https://img.freepik.com/free-vector/gradient-black-background-with-wavy-lines_52683-76100.jpg?semt=ais_hybrid'); /* Dark mode background image */
+}
+
+.calculator-container {
+    text-align: center;
+    padding: 20px;
+}
+
+#calculator {
+    display: inline-block;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: background-color 0.3s;
+}
+
+#display {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    text-align: right;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.scientific-buttons {
+    display: none;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn {
+    padding: 15px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #e0e0e0;
+    transition: background-color 0.2s, box-shadow 0.2s, transform 0.2s;
+    box-shadow: 0 5px #999;
+}
+
+.btn:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px #666;
+}
+
+.btn:hover {
+    background-color: #d0d0d0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode #calculator {
+    background-color: #444;
+}
+
+.dark-mode .btn {
+    background-color: #666;
+    color: #fff;
+}
+
+.dark-mode .btn:hover {
+    background-color: #555;
+}
+
+.dark-mode #display {
+    background-color: #666;
+    color: #fff;
+    border-bottom: 2px solid #888;
+}
+
+.branding {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+/* Show scientific buttons when in scientific mode */
+.scientific-mode .scientific-buttons {
+    display: grid;
+}
